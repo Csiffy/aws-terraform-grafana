@@ -24,7 +24,6 @@ resource "aws_security_group" "nfs_sg" {
   tags = "${merge(var.tags, map("Name", format("%s-nfs-sg", var.name)))}"
 }
 
-# TODO -> Need to change the Source section to the instance security group...
 resource "aws_security_group_rule" "nfs_inbound_port" {
   provider = "aws.current"
   type = "ingress"
@@ -34,10 +33,3 @@ resource "aws_security_group_rule" "nfs_inbound_port" {
   cidr_blocks = ["0.0.0.0/0"]
   security_group_id = "${aws_security_group.nfs_sg.id}"
 }
-
-#count        = "${var.az_count}"
-#subnet_id = "${element("${aws_subnet.main.*.id}", count.index)}"
-#subnet_id = "${element(split(",", var.mgmt_subnet_ids), count.index)}"
-#subnet_id = "${element(var.mgmt_subnet_ids, count.index)}"
-
-

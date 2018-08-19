@@ -3,6 +3,7 @@ vpc_id = ""
 private_subnet_ids = ["",""]
 public_subnet_ids = ["",""]
 aws_region = "eu-central-1"
+domain = "grafana.example.com"
 size = "1"
 instance_type = "t2.medium"
 allow_inbound_ports_and_cidr_blocks = {"22"="0.0.0.0/0","80"="0.0.0.0/0","443"="0.0.0.0/0"}

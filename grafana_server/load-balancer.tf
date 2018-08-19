@@ -50,7 +50,7 @@ resource "aws_alb" "this" {
 
 data "aws_acm_certificate" "grafana" {
   provider = "aws.current"
-  domain   = "grafana.example.com"
+  domain   = "${var.domain}"
   statuses = ["ISSUED","PENDING_VALIDATION"]
 }
 
