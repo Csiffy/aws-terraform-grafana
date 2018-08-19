@@ -8,7 +8,7 @@ resource "aws_efs_mount_target" "grafana_config_mountp" {
   provider = "aws.current"
   count = "${var.subnet_count}"
   file_system_id = "${aws_efs_file_system.grafana_config.id}"
-  subnet_id = "${element(var.mgmt_subnet_ids, count.index)}"
+  subnet_id = "${element(var.private_subnet_ids, count.index)}"
   security_groups = ["${aws_security_group.nfs_sg.id}"]
 }
 
