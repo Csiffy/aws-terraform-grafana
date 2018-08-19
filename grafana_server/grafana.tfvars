@@ -1,4 +1,7 @@
 name = "grafana-infra-monitoring"
+vpc_id = ""
+private_subnet_ids = ["",""]
+public_subnet_ids = ["",""]
 aws_region = "eu-central-1"
 size = "1"
 instance_type = "t2.medium"
