@@ -37,16 +37,16 @@ Bucket name: "test-terraform-states"
 ## Build a container
 
 You have to build a Grafana docker image, and push it to a reachable registry.
-For more informations you can find an example in the [grafana_docker](grafana_docker/README) folder.
+For more informations you can find an example in the [grafana_docker](grafana_docker/README.md) folder.
 
 ## Create an EFS file system store
 
-Please navigate to the [grafana_efs](grafana_efs/README) folder and follow the instructions
+Please navigate to the [grafana_efs](grafana_efs/README.md) folder and follow the instructions
 
 
 ## Install the Grafana server
 
-Last step is the Grafana server install, please navigate to the [grafana_server](grafana_server/README) folder
+Last step is the Grafana server install, please navigate to the [grafana_server](grafana_server/README.md) folder
 
 
 
